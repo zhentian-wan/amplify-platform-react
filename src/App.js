@@ -1,6 +1,6 @@
-import logo from './logo.svg'
 import './App.css'
 import { DataStore } from '@aws-amplify/datastore'
+import { withAuthenticator } from '@aws-amplify/ui-react';
 import { Storage } from 'aws-amplify'
 import { Course, Video } from './models'
 import { useEffect, useState } from 'react'
@@ -59,4 +59,4 @@ function App () {
   )
 }
 
-export default App
+export default withAuthenticator(App)
